@@ -13,6 +13,7 @@
 //! - **Engine**: `BacktestEngine` for running simulations
 //! - **Results**: `BacktestResult` with comprehensive metrics
 //! - **Fill models**: Realistic fill simulation with queue position and market impact
+//! - **Performance metrics**: Comprehensive metrics calculation (Sharpe, Sortino, etc.)
 //!
 //! # Example
 //!
@@ -45,6 +46,9 @@ pub mod engine;
 /// Realistic fill models for backtesting.
 pub mod fill_models;
 
+/// Performance metrics calculator.
+pub mod metrics;
+
 pub use data::{HistoricalDataSource, MarketTick, OHLCVBar, VecDataSource};
 pub use engine::{
     BacktestConfig, BacktestEngine, BacktestResult, BacktestStrategy, SimulatedFill, SlippageModel,
@@ -53,3 +57,4 @@ pub use fill_models::{
     FillModel, FillResult, ImmediateFillModel, MarketImpactFillModel, ProbabilisticFillModel,
     QueuePositionFillModel, SimulatedOrder,
 };
+pub use metrics::{EquityPoint, MetricsCalculator, MetricsConfig, PerformanceMetrics, TradeRecord};
