@@ -47,6 +47,9 @@ pub mod order_manager;
 /// Latency tracking and metrics.
 pub mod latency;
 
+/// OrderBook-rs connector implementation.
+pub mod orderbook_connector;
+
 pub use connector::{
     BookLevel, ExchangeConnector, Fill, MarketDataStream, OrderBookSnapshot, OrderId, OrderRequest,
     OrderResponse, OrderStatus, OrderType, Side, TimeInForce,
@@ -59,3 +62,4 @@ pub use mock::{MockConfig, MockExchangeConnector};
 pub use order_manager::{
     ManagedOrder, OrderManager, OrderManagerConfig, OrderManagerStats, ThreadSafeOrderManager,
 };
+pub use orderbook_connector::{OrderBookConnector, OrderBookConnectorConfig};

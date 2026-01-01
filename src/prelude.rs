@@ -68,9 +68,9 @@ pub use crate::analytics::vpin::{
 pub use crate::execution::{
     BookLevel, ExchangeConnector, Fill, Histogram, LatencyMeasurement, LatencyMetric, LatencyStats,
     LatencyTracker, LatencyTrackerConfig, ManagedOrder, MarketDataStream, MockConfig,
-    MockExchangeConnector, OrderBookSnapshot, OrderId, OrderManager, OrderManagerConfig,
-    OrderManagerStats, OrderRequest, OrderResponse, OrderStatus, OrderType, Side,
-    ThreadSafeOrderManager, TimeInForce,
+    MockExchangeConnector, OrderBookConnector, OrderBookConnectorConfig, OrderBookSnapshot,
+    OrderId, OrderManager, OrderManagerConfig, OrderManagerStats, OrderRequest, OrderResponse,
+    OrderStatus, OrderType, Side, ThreadSafeOrderManager, TimeInForce,
 };
 
 // Re-export backtest types
